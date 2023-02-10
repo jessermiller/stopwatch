@@ -1,2 +1,2 @@
 # stopwatch 
-basic start and reset stopwatch, building my skills with side projects!
+basic start and reset stopwatch, building my skills with side projects! *NOT YET FINISHED*
