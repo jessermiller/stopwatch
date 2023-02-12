@@ -1,14 +1,14 @@
 const timeCount = document.querySelector('.timer .time-track');
 const strtButt = document.getElementById('start');
-const stopButt = document.getElementById("stop");
+const stopButt = document.querySelector('#stopButton');
 const restrtButt = document.getElementById('restart');
 
 let count = 0;
 let interval = null;
 
-strtButt.addEventListener('click', start);
-stopButt.addEventListener('click', stop);
-restrtButt.addEventListener('click', restart);
+strtButt.addEventListener('click', startTimer);
+stopButt.addEventListener('click', stopTimer);
+restrtButt.addEventListener('click', restartTime);
 
 function timer(){
     count++;
@@ -23,22 +23,28 @@ function timer(){
     timeCount.innerText = `${hours}. ${minutes}. ${seconds}`;
 }
 
-function start () {
+function startTimer () {
     if (interval) {
         return;
     }
-
     interval = setInterval(timer, 1000);
 }
 
-function stop() {
+function stopTimer() {
     clearInterval(interval);
    interval = null;
     
 }
 
-function restart () {
-    stop();
-    seconds = 0;
-    timeCount.innerText = '00.00.00';
+function restartTime () {
+   if (interval) {
+    stopTimer();
+   }
+
+   count = 0;
+   timeCount.textContent = '00.00.00';
+}
+
+function countUp() {
+    count ++;
 }
