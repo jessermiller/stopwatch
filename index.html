@@ -1,18 +1,24 @@
 <!DOCTYPE html> 
 <html>
     <head>
-        <title>StopWatch</title>
+        <title>NoAdsStopWatch</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, intial-scale=1.0">
         <link rel="stylesheet" href="./style.css">
     </head>
     <body>     
        <div class="container">
-        <h2 id="stop">Stopwatch</h2>
-        <div class="stopwatch">
-           <span id="time-track" class="time-track">00.00</span>
+        <div class="timer">
+            <h2 id="stop">Stopwatch</h2>
+           <span id="time-track" class="time-track">00.00.00</span>
+           <br>
+           <div class="controls">
+            <button id = "start" class="buttons start">Start</button>
+            <button id = "stop" class="buttons stop">Stop</button>
+            <button id = "restart" class="buttons restart">Restart</button></div>
+           
         </div>
        </div>
-
+<script src="app.js"></script>
     </body>
 </html>
